@@ -10,6 +10,8 @@ import { environment } from '../environments/environment';
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './users/user/user.component';
 import { UserListComponent } from './users/user-list/user-list.component';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { UserListComponent } from './users/user-list/user-list.component';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    GridModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
